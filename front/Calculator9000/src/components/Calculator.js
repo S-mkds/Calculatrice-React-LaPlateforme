@@ -39,12 +39,19 @@ import * as math from 'mathjs';
 
     //Condition It's over9000
 
+    // if(result < 9000){
+    //     // alert('Vous etes en dessous de 9000');
+    //     document.getElementById("over-hit").style.display = "none";
+        
+    // }else{
+    //     // alert('Vous etes au dessus de 9000 !!!');
+        
+    // }
 
    
   return (
     <div className="container"> 
           <div className='show-value'>
-        
         <BeautifulScreen text={text} result={result} />
         </div>
     
@@ -73,7 +80,12 @@ import * as math from 'mathjs';
         <button className="highlight"  id="save">Save</button>
         <MagnificientEqualButton Equal="=" funcEqual={calculateResult} Onclick={calculateResult} id="result"/>
       </div> 
-      <ItsOverNineThousand Over="It’s Over 9000 !!!"/>
+      
+     { 
+     result > 9000 && setResult (<ItsOverNineThousand id="over-hit" Over="It’s Over 9000 !!!"/>)
+     }
+     
+
     </div>
    
   )

@@ -1,4 +1,6 @@
 .overhit {
     Color:white;
     font-weight: bold;
+    padding: 0.1rem;
+    background-color: green;
 }
