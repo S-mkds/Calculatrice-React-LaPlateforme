@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState } from "react";
-import "./ButtonCalculator.css"
+import "./Style.css"
 
 const ButtonCalculator = () => {
 
@@ -53,6 +53,7 @@ const ButtonCalculator = () => {
         <button name="." onClick={handleClick}>.</button>
         <button className="highlight" onClick={calculate} id="result">=</button>
       </div> 
+      <button className="highlight"  id="save">Save</button>
     </div>
    
   )

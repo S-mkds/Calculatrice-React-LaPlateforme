@@ -1,0 +1,10 @@
+#result {
+    grid-column: 3/5;
+    grid-row: 5;
+    color: #262834;
+    color: white;
+    width: 95%;
+    background: #08e984 !important;
+    font-weight: bold;
+    border: 1px black solid;
+}
