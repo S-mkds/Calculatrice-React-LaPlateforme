@@ -1,11 +1,18 @@
 import React from 'react'
 import "./BeautifulScreen.css"
 
-const BeautifulScreen = ({ result }) => {
+const BeautifulScreen = ({  text, result  }) => {
   return (
-    <form>
-        <input type="text" value= {result}/>
-    </form>
+    <div>
+    <div className="result">
+				<h2>
+					{result}
+				</h2>
+			</div>
+			<div className="text">
+				<h3>{text}</h3>
+			</div>
+      </div>
   )
 }
 

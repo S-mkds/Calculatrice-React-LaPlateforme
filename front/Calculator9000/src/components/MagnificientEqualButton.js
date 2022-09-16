@@ -1,11 +1,11 @@
 import React from 'react'
 import "./MagnificientEqualButton.css"
 
-const MagnificientEqualButton = ({ Equal }) => {
+const MagnificientEqualButton = ({ equal, funcEqual }) => {
   return (
-    <button id="result">
-      {Equal}
-    </button>
+    <button onClick={() => funcEqual(equal)} id="result">=
+    {equal}
+  </button>
   )
 }
 

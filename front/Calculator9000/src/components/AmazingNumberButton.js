@@ -1,10 +1,10 @@
 import React from 'react'
 import "./AmazingNumberButton.css"
 
-const AmazingNumberButton = ( { ButtonNumber }) => {
+const AmazingNumberButton = ( { buttonNumber, foo }) => {
   return (
-    <button>
-      {ButtonNumber}
+    <button onClick={()=>foo(buttonNumber)}>
+      {buttonNumber}
     </button>
   )
 }

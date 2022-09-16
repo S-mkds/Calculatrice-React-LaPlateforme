@@ -13,11 +13,6 @@
     border-radius: 5px;
 }
 
-.container form {
-    background-color: rgb(33, 30, 30);
-    border: black 3px solid;
-    padding: 0.5rem;
-}
 
 .keypad { 
     display: grid;
@@ -25,17 +20,22 @@
     grid-auto-rows: minmax(60px, auto);
 }
 
-input[type="text"] {
-    height: 75px;
-    width: 250px;
+.show-value {
+    height: 90px;
     background-color: #10111600;
     border: 0px;
     color: #fff;
+    padding-top: 2rem;
     text-align: right;
     font-size: 25px;
     font-weight: 500;
     letter-spacing: 1px;
+    background-color: rgb(33, 30, 30);
+    border: black 3px solid;
+
+ 
 }
+
 
 #clear {
     grid-column: 1/3;

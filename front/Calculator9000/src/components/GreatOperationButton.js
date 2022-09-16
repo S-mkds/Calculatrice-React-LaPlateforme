@@ -1,11 +1,14 @@
 import React from 'react'
 
 
-const GreatOperationButton = ( { Operator }) => {
+const GreatOperationButton = ( {  operator, funcOperator }) => {
   return (
-    <button className='highlight'>
-      {Operator}
-    </button>
+    <button 
+			onClick={() => funcOperator(operator)}
+			className="highlight"
+		>
+			{operator}
+		</button>
   )
 }
 
