@@ -4,7 +4,7 @@ import "./GreatOperationButton.css"
 
 const GreatOperationButton = ( {  operator, funcOperator }) => {
   return (
-    <button 
+    <button
 			onClick={() => funcOperator(operator)}
 			className="highlight"
 		>

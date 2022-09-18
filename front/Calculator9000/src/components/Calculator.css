@@ -19,8 +19,8 @@
     grid-auto-rows: minmax(60px, auto);
 }
 
-
-.highlight {
-    background: #8a7716;
+#save {
+    background-color: rgb(176, 78, 78);
     color: white;
 }
+

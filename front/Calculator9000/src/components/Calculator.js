@@ -34,7 +34,7 @@ import * as math from 'mathjs';
     }
 
     const backspace = () => {
-      setResult(result.slice(0, result.length - 1));
+      setResult(text.slice(0, text.length - 1));
     }
 
   return (
@@ -48,28 +48,28 @@ import * as math from 'mathjs';
      }
       </div>
       <div className="keypad">
-        <GreatOperationButton className="highlight" operator="Clear" Onclick={resetInput} funcOperator={resetInput} id="clear"/>
-        <GreatOperationButton className="highlight" operator="C" funcOperator={backspace} id="backspace"/>
-        <GreatOperationButton className="highlight" operator="/"  funcOperator={addTotext}/>
-        <GreatOperationButton className="highlight" operator="*" funcOperator={addTotext}/>
+        <GreatOperationButton operator="Clear" Onclick={resetInput} funcOperator={resetInput} id="clear"/>
+        <GreatOperationButton operator="C" funcOperator={backspace} id="backspace"/>
+        <GreatOperationButton operator="/"  funcOperator={addTotext}/>
+        <GreatOperationButton operator="*" funcOperator={addTotext}/>
        
         <AmazingNumberButton buttonNumber="7" foo={addTotext}/>
         <AmazingNumberButton buttonNumber="8" foo={addTotext}/>
         <AmazingNumberButton buttonNumber="9" foo={addTotext}/>
        
-        <GreatOperationButton className="highlight" operator="-" funcOperator={addTotext}/>
+        <GreatOperationButton operator="-" funcOperator={addTotext}/>
         <AmazingNumberButton buttonNumber="4" foo={addTotext}/>
         <AmazingNumberButton buttonNumber="5" foo={addTotext}/>
         <AmazingNumberButton buttonNumber="6" foo={addTotext}/>
        
-        <GreatOperationButton className="highlight" operator="+" funcOperator={addTotext}/>
+        <GreatOperationButton operator="+" funcOperator={addTotext}/>
         <AmazingNumberButton buttonNumber="1" foo={addTotext}/>
         <AmazingNumberButton buttonNumber="2" foo={addTotext}/>
         <AmazingNumberButton buttonNumber="3" foo={addTotext}/>
         
         <GreatOperationButton operator="." funcOperator={addTotext}/>
         <AmazingNumberButton buttonNumber="0" foo={addTotext}/>
-        <button className="highlight"  id="save">Save</button>
+        <button id="save">Save</button>
         <MagnificientEqualButton Equal="=" funcEqual={calculateResult} Onclick={calculateResult} id="result"/>
       </div> 
     
