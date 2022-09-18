@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState } from "react";
-import "./Style.css"
+import "./Calculator.css";
 import AmazingNumberButton from './AmazingNumberButton';
 import BeautifulScreen from './BeautifulScreen';
 import GreatOperationButton from './GreatOperationButton';
@@ -37,24 +37,16 @@ import * as math from 'mathjs';
       setResult(result.slice(0, result.length - 1));
     }
 
-    //Condition It's over9000
-
-    // if(result < 9000){
-    //     // alert('Vous etes en dessous de 9000');
-    //     document.getElementById("over-hit").style.display = "none";
-        
-    // }else{
-    //     // alert('Vous etes au dessus de 9000 !!!');
-        
-    // }
-
-   
   return (
     <div className="container"> 
-          <div className='show-value'>
+        <div className='show-value'>
         <BeautifulScreen text={text} result={result} />
-        </div>
-    
+
+{/* //Condition It's over9000 */}
+     { 
+     result > 9000 && setResult (<ItsOverNineThousand id="over-hit" Over="It’s Over 9000 !!!"/>)
+     }
+      </div>
       <div className="keypad">
         <GreatOperationButton className="highlight" operator="Clear" Onclick={resetInput} funcOperator={resetInput} id="clear"/>
         <GreatOperationButton className="highlight" operator="C" funcOperator={backspace} id="backspace"/>
@@ -80,12 +72,7 @@ import * as math from 'mathjs';
         <button className="highlight"  id="save">Save</button>
         <MagnificientEqualButton Equal="=" funcEqual={calculateResult} Onclick={calculateResult} id="result"/>
       </div> 
-      
-     { 
-     result > 9000 && setResult (<ItsOverNineThousand id="over-hit" Over="It’s Over 9000 !!!"/>)
-     }
-     
-
+    
     </div>
    
   )

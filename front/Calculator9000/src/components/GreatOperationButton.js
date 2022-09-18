@@ -1,4 +1,5 @@
 import React from 'react'
+import "./GreatOperationButton.css"
 
 
 const GreatOperationButton = ( {  operator, funcOperator }) => {

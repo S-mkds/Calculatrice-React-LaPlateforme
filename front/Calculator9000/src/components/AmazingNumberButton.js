@@ -3,7 +3,7 @@ import "./AmazingNumberButton.css"
 
 const AmazingNumberButton = ( { buttonNumber, foo }) => {
   return (
-    <button onClick={()=>foo(buttonNumber)}>
+    <button id='show-value' onClick={()=>foo(buttonNumber)}>
       {buttonNumber}
     </button>
   )
